@@ -581,21 +581,17 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Supabase Cloud Configuration
+    const SUPABASE_URL = 'https://majphwwsiyjhcijwspba.supabase.co';
+    const SUPABASE_ANON_KEY = 'PASTE_YOUR_FULL_SUPABASE_ANON_KEY_HERE';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    <script>
-        // Supabase Cloud Configuration
-        const SUPABASE_URL = 'https://majphwwsiyjhcijwspba.supabase.co';[cite: 6]
-        const SUPABASE_ANON_KEY = 'sb_publishable_zAj1R_PUhqsqrIiMAv8nWA_uEsx1...';[cite: 9]
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-        let db = {
-            staffAccounts: [
-                { role: 'TEACHER', name: 'Mr. Nassary J.', username: 'teacher1', password: 'password123' },
-                { role: 'ACADEMIC', name: 'Mr. Academic Master', username: 'academic1', password: 'password123' }
-            ],
-            assignments: [
-                { teacherUsername: 'teacher1', teacherName: 'Mr. Nassary J.', className: 'Form 1A', subject: 'Basic Mathematics' }
-            ],
+    let db = {
+        staffAccounts: [
+            { role: 'TEACHER', name: 'Mr. Nassary J.', username: 'teacher1', password: 'password123' },
+            { role: 'ACADEMIC', name: 'Mr. Academic Master', username: 'academic1', password: 'password123' }
+        ],
             classes: ['Form 1A', 'Form 2A'],
             subjects: ['Civics', 'History', 'Geography', 'Kiswahili', 'English', 'Physics', 'Chemistry', 'Biology', 'Basic Mathematics'],
             exams: ['Mid-Term 2026', 'Terminal Exam 2026'],
